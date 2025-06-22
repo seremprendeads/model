@@ -5,6 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Furni - Modern Interior Design Studio</title>
     <script src="https://cdn.tailwindcss.com"></script>
+      <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gold: '#f5bb23',
+                        'gold-dark': '#B8860B',
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'system-ui', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
         
@@ -13,7 +28,7 @@
         }
         
         .hero-bg {
-            background: linear-gradient(135deg, #2d5a4d 0%, #1a3d33 100%);
+            background: linear-gradient(135deg, #ffd000 0%, #f5bb23 100%);
         }
         
         .fade-in {
@@ -51,7 +66,7 @@
         }
         
         .text-gradient {
-            background: linear-gradient(135deg, #f59e0b, #ea580c);
+            background: linear-gradient(135deg, #f5bb23, #ea860c);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -71,8 +86,8 @@
 
       <!-- Logo a la izquierda -->
       <div class="flex items-center">
-        <div class="logo w-12 h-12 rounded-full flex items-center justify-center">
-          <img src="https://moldesa.com.ar/#inicio" alt="logo" class="w-full h-full object-contain">
+        <div class="logo rounded-full flex items-center justify-center">
+          <img src="https://res.cloudinary.com/dliredzt9/image/upload/v1746220868/logo_negro_fxxirv.png" alt="moldesa" class="w-24 h-12 object-contain">
         </div>
       </div>
 
@@ -83,11 +98,12 @@
 
       <!-- Menú (desktop y móvil) -->
       <div class="hidden md:flex space-x-6 lg:space-x-8 items-center" id="menu">
-        <a href="#" class="text-white hover:text-gold transition-colors duration-300 font-medium text-sm lg:text-base">Servicios</a>
-        <a href="#" class="text-white hover:text-gold transition-colors duration-300 font-medium text-sm lg:text-base">Recursos Gratuitos</a>
-        <a href="#" class="text-white hover:text-gold transition-colors duration-300 font-medium text-sm lg:text-base">Trabaja Con Nosotros</a>
-        <button class="btn-gold text-black font-semibold px-4 lg:px-6 py-2 rounded-full text-sm lg:text-base whitespace-nowrap">
-          AGENDAR LLAMADA
+        <a href="#" class="text-gray-800 hover:text-gold transition-colors duration-300 font-medium text-sm lg:text-base">Moldes</a>
+        <a href="#" class="text-gray-800 hover:text-gold transition-colors duration-300 font-medium text-sm lg:text-base">Frisos Baguetones</a>
+        <a href="#" class="text-gray-800 hover:text-gold transition-colors duration-300 font-medium text-sm lg:text-base">Molduras</a>
+        <a href="#" class="text-gray-800 hover:text-gold transition-colors duration-300 font-medium text-sm lg:text-base">Accesorios</a>
+        <button class="btn-gold bg-gold p-2 text-black font-semibold px-4 lg:px-6 py-2 rounded-full text-sm lg:text-base whitespace-nowrap">
+          Hablemos
         </button>
       </div>
 
@@ -95,11 +111,12 @@
 
     <!-- Menú móvil desplegable -->
     <div id="mobile-menu" class="md:hidden hidden flex-col space-y-4 pb-6 px-4">
-      <a href="#" class="text-white block hover:text-gold font-medium py-2">Servicios</a>
-      <a href="#" class="text-white block hover:text-gold font-medium py-2">Recursos Gratuitos</a>
-      <a href="#" class="text-white block hover:text-gold font-medium py-2">Trabaja Con Nosotros</a>
-      <button class="btn-gold text-black font-semibold px-6 py-2 rounded-full w-full mt-4">
-        AGENDAR LLAMADA
+      <a href="#" class="text-gray-800 block hover:text-gold font-medium py-2">Moldes</a>
+      <a href="#" class="text-gray-800 block hover:text-gold font-medium py-2">Frisos - Baguetones</a>
+      <a href="#" class="text-gray-800  block hover:text-gold font-medium py-2">Molduras</a>
+      <a href="#" class="text-gray-800 block hover:text-gold font-medium py-2">Accesorios</a>
+      <button class="btn-gold bg-gold p-2 text-black font-semibold px-6 py-2 rounded-full w-full mt-4">
+      Hablemos
       </button>
     </div>
   </nav>
@@ -107,35 +124,52 @@
 
 
 <!-- Hero Section -->
-<section class="hero-bg text-white min-h-screen flex items-center pt-6">
-    <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
-        <div class="fade-in">
-            <h1 class="text-5xl lg:text-6xl font-bold leading-tight mb-6">
-                Modern Interior<br>
-                <span class="text-gradient">Design Studio</span>
-            </h1>
-            <p class="text-xl text-gray-300 mb-8 leading-relaxed">
-                Transform your space with our expert interior design services. 
-                Creating beautiful, functional environments that reflect your unique style.
-            </p>
-            <div class="flex flex-col sm:flex-row gap-4">
-                <button class="bg-yellow-500 hover:bg-yellow-600 text-black px-8 py-4 rounded-lg font-semibold transition-all transform hover:scale-105">
-                    Shop Now
-                </button>
-                <button class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all">
-                    Explore
-                </button>
-            </div>
-        </div>
-        <div class="relative fade-in">
-            <div class="chair-animation">
-                <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=600&h=400&fit=crop" 
-                     alt="Modern Green Sofa" class="w-full max-w-lg mx-auto rounded-2xl shadow-2xl">
-            </div>
-            <div class="absolute -top-8 -right-8 w-32 h-32 dot-pattern opacity-20 rounded-full"></div>
-        </div>
+<section class="relative text-white min-h-screen flex items-center pt-24" style="background: linear-gradient(135deg, #ffde2c, #eb5e0c);">
+  
+<!-- Capa granizado con imagen repetida como patrón -->
+<div class="absolute inset-0 pointer-events-none "
+     style="
+       background-image: url('fade.gif');
+       background-repeat: repeat;
+    ">
+</div>
+  
+  <div class="relative max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center z-10">
+    <div class="fade-in">
+      <h1 class="text-5xl lg:text-6xl font-bold leading-tight mb-6 text-center lg:text-left text-gray-800">
+        Moldes de caucho<br>
+        <span class="text-gradient"> Siliconados</span>
+      </h1>
+      <p class="text-xl text-gray-600 mb-8 leading-relaxed text-center lg:text-left">
+       <b>Fabrica HOY</b> tus placas <b>anti-humedad</b> con nuestros moldes de caucho siliconado. Crea tu emprendimiento o <b>PYME</b>.
+      </p>
+
+      <div class="hidden sm:flex flex-row gap-4">
+        <button class="bg-white hover:bg-gray-100 text-gray-900 px-8 py-4 rounded-lg font-semibold transition-all transform hover:scale-105">
+          Saber más...
+        </button>
+        <button class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all">
+         Hablemos
+        </button>
+      </div>
     </div>
+    <div class="relative fade-in">
+      <div class="chair-animation">
+        <img src="https://res.cloudinary.com/dliredzt9/image/upload/v1746220863/hero_xunnzn.png" 
+             alt="Molde de Caucho" class="w-full max-w-lg mx-auto rounded-2xl">
+      </div>
+    </div>
+    <div class="flex flex-col gap-4 sm:hidden pb-24">
+      <button class="bg-white hover:bg-gray-100 text-gray-900 px-8 py-4 rounded-full font-semibold transition-all transform hover:scale-105">
+         Saber más...
+      </button>
+      <button class="border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-gray-900 transition-all">
+        Hablemos
+      </button>
+    </div>
+  </div>
 </section>
+
 
 <!-- Design Services -->
 <section class="py-20 bg-white">
@@ -148,17 +182,17 @@
 
                     <!-- Columna izquierda -->
                     <div class="space-y-4">
-                        <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=300&h=400&fit=crop" 
+                        <img src="https://res.cloudinary.com/dliredzt9/image/upload/v1746220840/meteor-con-encastre_n5ukpm.jpg" 
                              alt="Living Room" class="w-full rounded-2xl shadow-lg">
-                        <img src="https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?w=300&h=200&fit=crop" 
+                        <img src="https://res.cloudinary.com/dliredzt9/image/upload/v1746220839/Laja-Tandil-1_atex6m.webp" 
                              alt="Modern Chair" class="w-full rounded-2xl shadow-lg">
                     </div>
 
                     <!-- Columna derecha con imagen adicional -->
                     <div class="space-y-4 pt-8">
-                        <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=300&h=300&fit=crop" 
+                        <img src="https://res.cloudinary.com/dliredzt9/image/upload/v1746220852/mar-del-plata_effida.webp" 
                              alt="Interior Design" class="w-full rounded-2xl shadow-lg">
-                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=300&h=200&fit=crop"
+                        <img src="https://res.cloudinary.com/dliredzt9/image/upload/v1746220852/moldura-mas-bagueton-doble_stj1i7.webp"
                              alt="Extra Room" class="w-full rounded-2xl shadow-lg">
                     </div>
                 </div>
@@ -201,7 +235,8 @@
 
 
     <!-- Why Choose Us -->
-    <section class="py-20 bg-gray-50">
+    <section class="py-20 " style="background: linear-gradient(135deg, #ffde2c, #eb5e0c92);">
+
         <div class="max-w-7xl mx-auto px-6">
             <div class="grid lg:grid-cols-2 gap-16 items-center">
                 <div class="fade-in">
@@ -262,8 +297,8 @@
                 </div>
                 
                 <div class="relative fade-in">
-                    <div class="absolute top-8 left-8 w-24 h-24 dot-pattern opacity-30 rounded-full"></div>
-                    <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=600&h=400&fit=crop" 
+                    <div class="rounded-full "></div>
+                    <img src="https://res.cloudinary.com/dliredzt9/image/upload/v1746220862/accesorios_puzqpf.png" 
                          alt="Modern Living Room" class="w-full rounded-2xl shadow-2xl">
                 </div>
             </div>
